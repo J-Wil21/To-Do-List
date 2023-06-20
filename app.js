@@ -1,7 +1,7 @@
 const form = document.getElementById('addTask')
 const newTask = document.getElementById('ToDo')
 const ulList = document.getElementById('list')
-
+const closebtn = document.querySelector('.x');
 
 form.addEventListener('submit', function addTask(e) {
     e.preventDefault();
@@ -22,17 +22,25 @@ form.addEventListener('submit', function addTask(e) {
 })
 
 /* function to show and remove button*/
-function showAlert(message) {
-    var customAlert = document.querySelector(".alert-box");
-    var messageElement = customAlert.querySelector(".alert-title");
-    var okButton = customAlert.querySelector(".alert-button");
+function showAlert(text) {
+   const alert = document.querySelector(".alert-box");
+    const message = alert.querySelector(".alert-title");
+    const okBtn = alert.querySelector(".alert-button");
+    const reminder = document.querySelector('.alert-box2');
 
-    messageElement.textContent = message;
+    message.textContent = text;
 
-    customAlert.style.display = "block";
+    alert.style.display = "block";
 
 
-    okButton.addEventListener("click", function () {
-        customAlert.style.display = "none";
+    okBtn.addEventListener("click", function () {
+        alert.style.display = "none";
+        reminder.style.display = 'block'
     })
+
+    closebtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        reminder.style.display = 'none';
+    } )
+
 }

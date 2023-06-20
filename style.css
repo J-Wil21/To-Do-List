@@ -3,10 +3,23 @@
 }
 
 body {
+background-image: url('img/lines.webp');
+}
+
+#bkgrdGreen {
     background-color: #a4c3b2;
 }
 
-.alert-box {
+#ToDO {
+    width: 35%;
+    height: 8%;
+    padding-top: 0;
+    line-height: 1;
+
+}
+
+/*styling for both alert boxes*/
+.boxStyle {
     position: fixed;
     top: 30%;
     left: 50%;
@@ -18,11 +31,12 @@ body {
     padding: 20px;
     text-align: center;
     border-radius: 20px;
-    display: none;
 }
 
-.alert-button:hover {
-    background-color: #004794;
+.alert-box,
+.alert-box2 {
+    display: none;
+    font-size: 23px;
 }
 
 .alert-title {
@@ -30,10 +44,17 @@ body {
     margin-top: 0;
 }
 
+.x {
+    width: 20px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
 .alert-message {
-    font-size: 23px;
+    padding-top: 29px;
 }
 
+/*Button styling*/
 .alert-button {
     background-color: #005fc5;
     color: white;
@@ -42,4 +63,12 @@ body {
     border-radius: 20px;
     cursor: pointer;
     margin-top: 3px;
+}
+.alert-button:hover {
+    background-color: #004794;
+}
+
+
+li {
+    list-style-type: none;
 }
