@@ -1,5 +1,4 @@
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,33 +10,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1c7059403b.js" crossorigin="anonymous"></script>
     <title>To Do List</title>
 </head>
-
 <body class="container-sm text-center">
-    <main class="mt-5 p-4 border border-5 shadow border-warning rounded" id="bkgrdGreen">
+    <main class="mt-5 pt-5 pb-5 border border-5 shadow border-warning rounded" id="bkgrdGreen">
         <h1 class="fs-1"> To Do List</h1>
-        <form class="mb-5" id="addTask">
-            <label class=" mb-4 fs-3 text d-block ">New Task</label>
-            <textarea type="text" name="toDoList" id="ToDo" class="mb-4 p-2"></textarea>
-            <button class="btn btn-warning d-block w-25 mx-auto fs-3 text">Add Task</button>
-        </form>
-        <div class="mx-auto w-50 border border-warning-subtle border-start-0 border-end-0 p-3">
-            <ul class="fs-5" id="list">
-            </ul>
+        <div class="mb-5" >
+            <label class=" mb-4 fs-3 text d-block">New Task</label>
+            <textarea type="text" name="toDoList" id="toDo" class="mb-4 p-2"></textarea>
+            <button id="addBtn" class=" btnStyle btn btn-warning d-block mx-auto fs-3 text">Add Task</button>     
+        </div>
+        <div class="mx-auto w-50 border border-warning-subtle border-start-0 border-end-0 p-3" id="list">
         </div>
         <div class="alert-box boxStyle">
             <h2 class="alert-title text-danger"></h2>
             <p>Please type a task</p>
             <button class="alert-button">OK</button>
+            
         </div>
         <div class="alert-box2 boxStyle">
             <img class="x" src="img/close.png" alt="an X icon to close the alert.">
             <h2 class="alert-message alert-title">Don't forget to type in a task!</h2>
-        </div>
+        </div> 
     </main>
-
     <script src="app.js"></script>
 </body>
-
 </html>
